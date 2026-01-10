@@ -1,0 +1,248 @@
+/* CSS Variables for Theming */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --card-bg: white;
+  --border-radius: 8px;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+.dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-warning {
+  text-align: center;
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+/* Stats */
+.dashboard-stats {
+  margin-bottom: 30px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Tabs */
+.dashboard-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background: var(--background-color);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background 0.3s;
+}
+
+.dashboard-tabs button.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Profile */
+.profile-hero {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.edit-btn {
+  margin-left: auto;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn:hover {
+  background: #0056b3;
+}
+
+/* Settings */
+.profile-settings {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.profile-settings label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-settings input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+.settings-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn, .cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.save-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.cancel-btn {
+  background: var(--secondary-color);
+  color: white;
+}
+
+/* Sections */
+.dashboard-section {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+.course-list, .job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card, .job-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.course-card:hover, .job-card:hover {
+  transform: translateY(-5px);
+}
+
+.progress-bar {
+  height: 10px;
+  background: var(--background-color);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-item {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.empty-text {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/*

@@ -1,0 +1,116 @@
+/* ================= FOOTER ================= */
+.footer {
+  margin-top: 80px;
+  background: radial-gradient(
+      circle at top right,
+      rgba(56, 189, 248, 0.18),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #020617, #0f172a);
+  color: #e5e7eb;
+}
+
+/* ================= GRID ================= */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 44px;
+  padding: 56px 8% 36px;
+}
+
+/* ================= BRAND ================= */
+.footer-brand h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #c7d2fe;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+/* ================= LINKS ================= */
+.footer-links h4 {
+  font-size: 15px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #38bdf8;
+  position: relative;
+}
+
+.footer-links h4::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.footer-links a {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: #e5e7eb;
+  margin-bottom: 10px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+  transform: translateX(6px);
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  background: #020617;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  color: #94a3b8;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.footer-bottom span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 44px 6% 32px;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-links a:hover {
+    transform: none;
+  }
+
+  .footer-links h4::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer-desc {
+  font-size: 13px;
+  color: #cbd5f5;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

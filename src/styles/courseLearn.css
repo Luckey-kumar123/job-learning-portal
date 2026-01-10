@@ -1,0 +1,168 @@
+/* CSS Variables for Theming */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --card-bg: white;
+  --border-radius: 8px;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+.course-learn {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+
+/* Layout */
+.learn-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.lesson-sidebar {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.lesson-sidebar h3 {
+  margin-top: 0;
+}
+
+.lesson-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--background-color);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lesson-item:hover {
+  background: var(--background-color);
+}
+
+.lesson-item.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.lesson-item.completed {
+  background: #d4edda;
+}
+
+.lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complete-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.lesson-content {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.video-placeholder, .quiz-placeholder {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.lesson-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.lesson-navigation button {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lesson-navigation button:disabled {
+  background: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+.completion-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: #d4edda;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .learn-layout {
+    grid-template-columns: 1fr;
+  }
+  .lesson-sidebar {
+    order: 2;
+  }
+  .lesson-content {
+    order: 1;
+  }
+}

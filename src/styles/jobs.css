@@ -1,0 +1,211 @@
+/* ================= ROOT ================= */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --bg-light: #f9fafb;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --glass: rgba(255, 255, 255, 0.75);
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.18);
+  --transition: all 0.3s ease;
+}
+
+/* ================= PAGE ================= */
+.jobs-page {
+  max-width: 1400px;
+  margin: auto;
+  padding: 32px 20px 60px;
+  background: var(--bg-light);
+}
+
+.jobs-page h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.jobs-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 36px;
+  font-size: 1.05rem;
+}
+
+/* ================= SEARCH ================= */
+.job-search {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  display: block;
+  padding: 14px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.job-search:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* ================= GRID ================= */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+}
+
+/* ================= CARD ================= */
+.job-card {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  padding: 26px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.job-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+}
+
+.job-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  color: var(--text-dark);
+}
+
+.job-card p {
+  margin: 4px 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ================= ACTIONS ================= */
+.job-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.95rem;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+}
+
+.btn.outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ================= SAVE BUTTON ================= */
+.save-job {
+  margin-top: 14px;
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.save-job:hover {
+  text-decoration: underline;
+}
+
+/* ================= EMPTY ================= */
+.no-jobs {
+  text-align: center;
+  color: var(--text-light);
+  grid-column: 1 / -1;
+  font-size: 1.05rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .jobs-page h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs-page {
+    padding: 24px 16px 50px;
+  }
+
+  .jobs-page h2 {
+    font-size: 1.9rem;
+  }
+
+  .jobs-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .job-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs-page h2 {
+    font-size: 1.6rem;
+  }
+
+  .job-search {
+    font-size: 0.95rem;
+  }
+
+  .job-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
