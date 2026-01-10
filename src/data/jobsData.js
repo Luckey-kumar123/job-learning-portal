@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // ../data/jobsData.js
 
 const jobsData = [

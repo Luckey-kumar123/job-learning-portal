@@ -353,3 +353,5 @@ const syllabusData = [
     description: "Master SEO, social media, PPC, and content"
   }
 ]
+
+export default syllabusData;
