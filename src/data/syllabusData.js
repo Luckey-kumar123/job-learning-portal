@@ -1,7 +1,7 @@
 // ../data/syllabusData.js
 
 // eslint-disable-next-line no-unused-vars
-const syllabusData = [
+export const syllabusData = [
   {
     id: 1,
     title: "Full Stack Web Development",

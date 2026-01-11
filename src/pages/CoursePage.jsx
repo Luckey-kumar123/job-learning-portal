@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState, useCallback } from "react";
 import { useParams, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import useAuth from "../hooks/useAuth";
-import { syllabusData } from "../data/syllabusData";
+import { syllabusData } from "../data/syllabusData.js";
 import "../styles/coursePage.css";
 
 /* ================== COURSE FETCH HOOK ================== */
