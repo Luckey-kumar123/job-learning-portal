@@ -19,5 +19,5 @@ const courseContent = {
   ],
   // Add other courses...
 };
-
+//this is main 
 export default courseContent;
